@@ -1,3 +1,5 @@
 [submodule "Lending-user-service"]
 	path = Lending-user-service
 	url = https://github.com/TranThanhLam2005/Lending-user-service.git
+	branch = main
+
