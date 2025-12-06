@@ -3,3 +3,11 @@
 	url = https://github.com/TranThanhLam2005/Lending-user-service.git
 	branch = main
 
+[submodule "Lending-discovery-server"]
+	path = Lending-discovery-server
+	url = https://github.com/TranThanhLam2005/Lending-discovery-server.git
+	branch = main
+[submodule "Lending-gateway-service"]
+	path = Lending-gateway-service
+	url = https://github.com/TranThanhLam2005/Lending-gateway-service.git
+	branch = main
