@@ -11,3 +11,12 @@
 	path = Lending-gateway-service
 	url = https://github.com/TranThanhLam2005/Lending-gateway-service.git
 	branch = main
+[submodule "Lending-record-service"]
+	path = Lending-record-service
+	url = https://github.com/TranThanhLam2005/Lending-record-service.git
+[submodule "Lending-equipment-service"]
+	path = Lending-equipment-service
+	url = https://github.com/TranThanhLam2005/Lending-equipment-service.git
+[submodule "Lending-auth-service"]
+	path = Lending-auth-service
+	url = https://github.com/TranThanhLam2005/Lending-auth-service.git
