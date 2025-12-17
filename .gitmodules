@@ -23,3 +23,6 @@
 [submodule "restaurant-order-service"]
 	path = restaurant-order-service
 	url = https://github.com/TranThanhLam2005/restaurant-order-service.git
+[submodule "restaurant-identity-service"]
+	path = restaurant-identity-service
+	url = https://github.com/TranThanhLam2005/restaurant-identity-service.git
