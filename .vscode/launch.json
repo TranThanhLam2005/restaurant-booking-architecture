@@ -9,6 +9,26 @@
       "projectName": "identity",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-OrderApplication<order>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.order.OrderApplication",
+      "projectName": "order",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BranchApplication<branch>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.branch.BranchApplication",
+      "projectName": "branch",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
