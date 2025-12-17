@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: restaurant-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infrastructure/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  identity-service:
+    build: ./restaurant-identity-service
+    container_name: identity-service
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/identity_db
+      SPRING_DATASOURCE_USERNAME: identity_user
+      SPRING_DATASOURCE_PASSWORD: identity_pass
+
+  branch-service:
+    build: ./restaurant-branch-service
+    container_name: branch-service
+    ports:
+      - "8082:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/branch_db
+      SPRING_DATASOURCE_USERNAME: branch_user
+      SPRING_DATASOURCE_PASSWORD: branch_pass
+
+  order-service:
+    build: ./restaurant-order-service
+    container_name: order-service
+    ports:
+      - "8083:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/order_db
+      SPRING_DATASOURCE_USERNAME: order_user
+      SPRING_DATASOURCE_PASSWORD: order_pass
+
+volumes:
+  postgres_data:
