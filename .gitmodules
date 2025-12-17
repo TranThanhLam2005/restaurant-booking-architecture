@@ -26,3 +26,6 @@
 [submodule "restaurant-identity-service"]
 	path = restaurant-identity-service
 	url = https://github.com/TranThanhLam2005/restaurant-identity-service.git
+[submodule "restaurant-branch-service"]
+	path = restaurant-branch-service
+	url = https://github.com/TranThanhLam2005/restaurant-branch-service.git
