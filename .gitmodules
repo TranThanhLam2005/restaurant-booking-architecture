@@ -8,3 +8,9 @@
 [submodule "restaurant-branch-service"]
 	path = restaurant-branch-service
 	url = https://github.com/TranThanhLam2005/restaurant-branch-service.git
+[submodule "restaurant-reservation-service"]
+	path = restaurant-reservation-service
+	url = https://github.com/TranThanhLam2005/restaurant-reservation-service.git
+[submodule "restaurant-menu-service"]
+	path = restaurant-menu-service
+	url = https://github.com/TranThanhLam2005/restaurant-menu-service.git
