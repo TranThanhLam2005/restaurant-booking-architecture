@@ -14,3 +14,9 @@
 [submodule "restaurant-menu-service"]
 	path = restaurant-menu-service
 	url = https://github.com/TranThanhLam2005/restaurant-menu-service.git
+[submodule "restaurant-discovery-server"]
+	path = restaurant-discovery-server
+	url = https://github.com/TranThanhLam2005/restaurant-discovery-server.git
+[submodule "restaurant-gateway-service"]
+	path = restaurant-gateway-service
+	url = https://github.com/TranThanhLam2005/restaurant-gateway-service.git
