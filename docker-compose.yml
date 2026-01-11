@@ -48,6 +48,18 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/order_db
       SPRING_DATASOURCE_USERNAME: order_user
       SPRING_DATASOURCE_PASSWORD: order_pass
+    
+  menu-service:
+    build: ./restaurant-menu-service
+    container_name: menu-service
+    ports:
+      - "8084:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/menu_db
+      SPRING_DATASOURCE_USERNAME: menu_user
+      SPRING_DATASOURCE_PASSWORD: menu_pass
 
 volumes:
   postgres_data:
