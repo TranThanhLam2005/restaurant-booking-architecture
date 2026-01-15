@@ -2,13 +2,28 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HashVerifier",
+      "request": "launch",
+      "mainClass": "com.example.identity.HashVerifier",
+      "projectName": "identity"
+    },
+    {
+      "type": "java",
+      "name": "UserServiceApplication",
+      "request": "launch",
+      "mainClass": "com.example.user_service.UserServiceApplication",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-IdentityApplication<identity>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "com.example.identity.IdentityApplication",
       "projectName": "identity",
       "args": "",
-      "envFile": "${workspaceFolder}/.env"
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62320 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=identity"
     },
     {
       "type": "java",
@@ -27,6 +42,26 @@
       "cwd": "${workspaceFolder}",
       "mainClass": "com.example.branch.BranchApplication",
       "projectName": "branch",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-MenuApplication<menu>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.menu.MenuApplication",
+      "projectName": "menu",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-UserApplication<user>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.user.UserApplication",
+      "projectName": "user",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     }

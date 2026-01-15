@@ -81,5 +81,19 @@ services:
       SPRING_DATASOURCE_PASSWORD: menu_pass
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/eureka/
 
+  user-service:
+    build: ./restaurant-user-service
+    container_name: user
+    ports:
+      - "8084:8080"
+    depends_on:
+      - postgres
+      - discovery-server
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/user_db
+      SPRING_DATASOURCE_USERNAME: user_user
+      SPRING_DATASOURCE_PASSWORD: user_pass
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/eureka/
+
 volumes:
   postgres_data:
