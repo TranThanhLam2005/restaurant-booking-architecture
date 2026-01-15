@@ -20,3 +20,6 @@
 [submodule "restaurant-gateway-service"]
 	path = restaurant-gateway-service
 	url = https://github.com/TranThanhLam2005/restaurant-gateway-service.git
+[submodule "restaurant-user-service"]
+	path = restaurant-user-service
+	url = https://github.com/TranThanhLam2005/restaurant-user-service.git
