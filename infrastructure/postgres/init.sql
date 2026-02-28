@@ -3,12 +3,14 @@ CREATE DATABASE branch_db;
 CREATE DATABASE order_db;
 CREATE DATABASE menu_db;
 CREATE DATABASE user_db;
+CREATE DATABASE reservation_db;
 
 CREATE USER identity_user WITH PASSWORD 'identity_pass';
 CREATE USER branch_user WITH PASSWORD 'branch_pass';
 CREATE USER order_user WITH PASSWORD 'order_pass';
 CREATE USER menu_user WITH PASSWORD 'menu_pass';
 CREATE USER user_user WITH PASSWORD 'user_pass';
+CREATE USER reservation_user WITH PASSWORD 'reservation_pass';
 
 
 GRANT ALL PRIVILEGES ON DATABASE identity_db TO identity_user;
@@ -16,6 +18,7 @@ GRANT ALL PRIVILEGES ON DATABASE branch_db TO branch_user;
 GRANT ALL PRIVILEGES ON DATABASE order_db TO order_user;
 GRANT ALL PRIVILEGES ON DATABASE menu_db TO menu_user;
 GRANT ALL PRIVILEGES ON DATABASE user_db TO user_user;
+GRANT ALL PRIVILEGES ON DATABASE reservation_db TO reservation_user;
 
 -- Grant schema permissions (required in PostgreSQL 15+)
 \c identity_db;
@@ -42,3 +45,8 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO menu_user;
 GRANT ALL ON SCHEMA public TO user_user;
 GRANT ALL ON ALL TABLES IN SCHEMA public TO user_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO user_user;
+
+\c reservation_db;
+GRANT ALL ON SCHEMA public TO reservation_user;
+GRANT ALL ON ALL TABLES IN SCHEMA public TO reservation_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO reservation_user;
